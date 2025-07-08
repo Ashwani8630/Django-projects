@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block title %}Please SignUp{% endblock title %}
+
+
+{% block body %}
+
+<style>
+  .form-signin-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    background-color: #f8f9fa;
+  }
+
+  .form-signin {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+</style>
+
+<div class="form-signin-wrapper">
+  <main class="form-signin">
+    <form method="post" action="/signup/">
+      {% csrf_token %}
+      <h1 class="h3 mb-3 fw-normal text-center">Please sign up</h1>
+
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="username"
+          name="username"
+          placeholder="Enter your username"
+          required
+        />
+        <label for="username">Username</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+        />
+        <label for="username">Email</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input
+          type="password"
+          class="form-control"
+          id="password1"
+          name="password1"
+          placeholder="Enter password"
+          required
+        />
+        <label for="password1">Password</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          type="password"
+          class="form-control"
+          id="password2"
+          name="password2"
+          placeholder="Confirm password"
+          required
+        />
+        <label for="password2">Confirm Password</label>
+      </div>
+
+      <button class="w-100 btn btn-lg btn-primary" type="submit">
+        Sign up
+      </button>
+    </form>
+  </main>
+</div>
+{% endblock body %}
+

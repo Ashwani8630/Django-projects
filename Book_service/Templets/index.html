@@ -1,0 +1,200 @@
+<!-- @format -->
+
+{% extends "base.html" %} 
+{% block title %}
+ Home page {% endblock title %}
+{%block body%}
+<div class="container-fluid mb-7">
+  <img
+    src="https://picsum.photos/200/300?random=1"
+    style="max-height: 400px; width: 100%"
+  />
+  {% if not request.user.is_authenticated %}
+    <h2 style="text-align: center;">
+      Please login for full access of all content
+    </h2>
+  {% endif %}
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-4">
+    <div class="col">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <p class="card-text">
+            <a href="/math">Math 10th</a></p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <p class="card-text">
+            <a href="/physics">Physics 10th</a>
+          </p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <p class="card-text">
+            <a href="/chemistry" >Chemistry 10th</a>
+          </p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <p class="card-text">
+            <a href="/chemistry">Chemistry Basic</a>
+          </p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <p class="card-text">
+            <a href="/chemistry">Organic Chemistry</a>
+          </p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <p class="card-text">
+            <a href="/chemistry">Inorganic Chemistry</a>
+          </p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <p class="card-text">
+            <a href="/math">Math Basic</a>
+          </p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <p class="card-text">
+            <a href="/math">Math Intermediate</a>
+          </p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <p class="card-text">
+            <a href="/math">Math JEE</a>
+          </p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <p class="card-text">
+            <a href="/physics">Basic Physics</a>
+          </p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <p class="card-text">
+            <a href="/physics">NEET Physics</a>
+          </p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <p class="card-text">
+            <a href="/physics">Advance Physics</a>
+          </p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <p class="card-text">
+            <a href="/literature">Literature</a>
+          </p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <p class="card-text">
+            <a href="/literature">Literature-2</a>
+          </p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <p class="card-text">
+            <a href="/literature">Literature-3</a>
+          </p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  {% endblock body %}
+

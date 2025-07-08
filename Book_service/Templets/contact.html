@@ -1,0 +1,62 @@
+<!-- @format -->
+
+{% extends "base.html" %}
+ {% block title %} contanct{% endblock title %}
+  {%block body %} 
+  <h2 class="text_centre" style="text-align: center">Contact Us</h2>
+</div>
+
+  <form method="post" action="/contact">
+  {% csrf_token %}
+
+       <div class="container">
+         <div class="mb-3">
+           <label for="name">Name</label>
+           <input
+             type="text"
+             class="form-control"
+             id="name"
+             name="name"
+             placeholder="Enter your name"
+           />
+         </div>
+         <div class="container">
+           <div class="mb-3">
+             <label for="phone">Phone</label>
+             <input
+               type="number"
+               class="form-control"
+               id="phone"
+               name="phone"
+               placeholder="Enter your 10 digite mobile number."
+             />
+           </div>
+           <div class="mb-3">
+             <label for="exampleFormControlInput1" class="form-label"
+               >Email Address</label
+             >
+             <input
+               type="email"
+               class="form-control"
+               id="exampleFormControlInput1"
+               name="email"
+          placeholder="name@example.com"
+             />
+           </div>
+           <div class="mb-3">
+             <label for="exampleFormControlTextarea1" class="form-label"
+               >Tell us the reason of interest...</label
+             >
+             <textarea
+             class="form-control"
+               id="exampleFormControlTextarea1"
+               name="message"
+               rows="3"
+             >Leave the comment here.</textarea>
+           </div>
+         </div>
+  
+         <button type="submit" class="btn btn-primary">Submit</button> 
+       </form>
+<div> 
+  {% endblock body %}
